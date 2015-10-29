@@ -9,7 +9,6 @@ import javax.inject.Inject;
 import javax.ws.rs.GET;
 
 import angularBeans.api.AngularBean;
-import angularBeans.api.CORS;
 import angularBeans.api.NGModel;
 import angularBeans.api.NGReturn;
 import angularBeans.api.NGSubmit;
@@ -51,9 +50,10 @@ public class HelloAngularBeans {
 	}
 
 	@NGReturn(model = "message", updates = "counter")
-	//2) we add NG submit that will tell the client 
-	//proxy to send his counter value and update the counter here (we need to add a setter also)
-	@NGSubmit(backEndModels="counter")
+	// 2) we add NG submit that will tell the client
+	// proxy to send his counter value and update the counter here (we need to
+	// add a setter also)
+	@NGSubmit(backEndModels = "counter")
 	public String sayHello(String name) {
 
 		counter++;
@@ -69,9 +69,8 @@ public class HelloAngularBeans {
 	public int getCounter() {
 		return counter;
 	}
-	
-	
-	//3) added for NGSubmit..
+
+	// 3) added for NGSubmit..
 	public void setCounter(int counter) {
 		this.counter = counter;
 	}
@@ -83,7 +82,6 @@ public class HelloAngularBeans {
 
 	}
 
-	
 	public void remove(User user) {
 
 		client.broadcast(models.removeFrom("users", user), false);

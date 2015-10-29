@@ -37,23 +37,26 @@
 						</fieldset>
 					</div>
 
-					<button ng-click="vm.helloAngularBeans.sayHello(vm.name)" class="btn btn-primary">click
-						me</button>
+					<button ng-click="vm.helloAngularBeans.sayHello(vm.name)"
+						class="btn btn-primary">click me</button>
 
-					<span style="color:blue" ng-if="vm.helloAngularBeans.message">message:  {{vm.helloAngularBeans.message}}</span>
-
-
-
-<button ng-click="vm.helloAngularBeans.getSomeUsers()">test</button>
-
-<ul>
-<li ng-repeat="user in vm.helloAngularBeans.users">{{user.name}} <button ng-click="vm.helloAngularBeans.remove(user)">remove</button></li>
+					<span style="color: blue" ng-if="vm.helloAngularBeans.message">message:
+						{{vm.helloAngularBeans.message}}</span>
 
 
 
-</ul>
-<!-- i forgot also to show the counter :) -->
-<h4>{{vm.helloAngularBeans.counter}}</h4>
+					<button ng-click="vm.helloAngularBeans.getSomeUsers()">test</button>
+
+					<ul>
+						<li ng-repeat="user in vm.helloAngularBeans.users">{{user.name}}
+							<button ng-click="vm.helloAngularBeans.remove(user)">remove</button>
+						</li>
+
+
+
+					</ul>
+					<!-- i forgot also to show the counter :) -->
+					<h4>{{vm.helloAngularBeans.counter}}</h4>
 
 
 				</div>
